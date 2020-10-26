@@ -45,6 +45,20 @@ namespace LinkedListDataStructure
             }
             return temp;
         }
+        /// <summary>
+        /// UC 2 : Inserts newData at beginning of linked list.
+        /// </summary>
+        /// <param name="newData">The new data.</param>
+        public void InsertAtFront(int newData)
+        {
+            Node newNode = new Node(newData);
+            /// Linking the newly created node to the current head
+            newNode.next = this.head;
+            /// Updating the current head to newNode so head node changes to newNode
+            this.head = newNode;
+            Console.WriteLine($"Inserted at linked list beginning :{newNode.data}");
+        }
+
 
         /// <summary>
         /// Displays the contents of linked list.
