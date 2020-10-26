@@ -14,7 +14,7 @@ namespace LinkedListDataStructure
         public Node head;
 
         /// <summary>
-        /// UC 1 : Inserts newData at the last or end of linked list
+        /// UC 1 and 3 : Inserts newData at the last or end of linked list
         /// </summary>
         /// <param name="newData">The new data.</param>
         public void InsertAtLast(int newData)
@@ -72,12 +72,14 @@ namespace LinkedListDataStructure
             }
             else
             {
-                Console.Write("\nLinked list serialized contents: ");
+                Console.Write("Linked list serialized contents: ");
                 while (temp != null)
                 {
                     Console.Write(temp.data + " ");
                     temp = temp.next;
                 }
+
+                Console.WriteLine("\n");
             }
         }
     }
