@@ -12,9 +12,11 @@ namespace LinkedListDataStructure
         static void Main(string[] args)
         {
             LinkedList linkedList = new LinkedList();
-            linkedList.InsertAtFront(70);
-            linkedList.InsertAtFront(30);
-            linkedList.InsertAtFront(56);
+            linkedList.InsertAtLast(56);
+            linkedList.Display();
+            linkedList.InsertAtLast(30);
+            linkedList.Display();
+            linkedList.InsertAtLast(70);
             linkedList.Display();
             Console.ReadKey();
         }
