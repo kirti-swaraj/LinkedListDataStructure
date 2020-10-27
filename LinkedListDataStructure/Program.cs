@@ -17,6 +17,9 @@ namespace LinkedListDataStructure
             linkedList.InsertAtLast(70);
             linkedList.InsertBetween(56, 70, 30);
             linkedList.Display();
+            linkedList.RemoveFirstNode();
+
+            linkedList.Display();
             Console.ReadKey();
         }
     }

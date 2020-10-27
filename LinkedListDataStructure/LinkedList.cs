@@ -85,6 +85,19 @@ namespace LinkedListDataStructure
                 Console.WriteLine($"New data added successfully between {data1} and {data2}");
             }
         }
+        /// <summary>
+        /// UC 5 : Removes the first node of the linked list
+        /// </summary>
+        public void RemoveFirstNode()
+        {
+            if (this.head == null)
+                Console.WriteLine("The linked list is empty");
+            else
+            {
+                this.head = this.head.next;
+                Console.WriteLine("First node removed successfully");
+            }
+        }
 
 
         /// <summary>
