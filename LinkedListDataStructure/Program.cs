@@ -11,13 +11,14 @@ namespace LinkedListDataStructure
     {
         static void Main(string[] args)
         {
+            ///UC7
             LinkedList linkedList = new LinkedList();
             linkedList.InsertAtLast(56);
             linkedList.InsertAtLast(30);
-            linkedList.InsertAtLast(70);           
+            linkedList.InsertAtLast(30);
+            linkedList.InsertAtLast(30);
             linkedList.Display();
-            ///UC6
-            linkedList.RemoveLastNode();  
+            linkedList.SearchFor(30);
             linkedList.Display();
             Console.ReadKey();
         }

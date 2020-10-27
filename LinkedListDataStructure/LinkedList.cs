@@ -9,7 +9,7 @@ namespace LinkedListDataStructure
     using System;
     using System.Collections.Generic;
     using System.Text;
-    class LinkedList
+public class LinkedList
     {
         public Node head;
 
@@ -124,7 +124,27 @@ namespace LinkedListDataStructure
                 Console.WriteLine("Last node removed successfully");
             }
         }
-
+        /// <summary>
+        /// UC 7 : Searches for the data in the list and returns its count
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
+        public int SearchFor(int data)
+        {
+            int count = 0;
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == data)
+                    count++;
+                temp = temp.next;
+            }
+            if (count == 0)
+                Console.WriteLine("Element not found");
+            else
+                Console.WriteLine($"Element {data} is present and its count = {count}");
+            return count;
+        }
 
         /// <summary>
         /// Displays the contents of linked list.
