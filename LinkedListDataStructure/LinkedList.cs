@@ -149,7 +149,49 @@ public class LinkedList
                 Console.WriteLine($"Element {data} is present and its count = {count}");
             return count;
         }
+        /// <summary>
+        /// UC 9 : Removes the node at which the entered data is present.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        public void RemoveNode(int data)
+        {
+            Node temp = this.head;
+            if (this.head == null)
+                Console.WriteLine("The linked list is empty");
+            /// Checks if the linked list has only one node
+            else if (this.head.data == data)
+            {
+                this.head = null;
+                Console.WriteLine("Node removed successfully");
+            }
+            else
+            {
+                /// Finding the node at which the data is present
+                while (temp.next.data != data)
+                {
+                    temp = temp.next;
+                }
+                Console.WriteLine("Node removed successfuly");
+                temp.next = temp.next.next;
+            }
+            Console.WriteLine("Size of the linked list = " + GetSize());
+        }
 
+        /// <summary>
+        /// Gets the size of the linked list.
+        /// </summary>
+        /// <returns></returns>
+        public int GetSize()
+        {
+            int count = 0;
+            Node temp = this.head;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+        }
         /// <summary>
         /// Displays the contents of linked list.
         /// </summary>
