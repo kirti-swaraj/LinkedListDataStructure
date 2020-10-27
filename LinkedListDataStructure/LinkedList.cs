@@ -98,6 +98,32 @@ namespace LinkedListDataStructure
                 Console.WriteLine("First node removed successfully");
             }
         }
+        /// <summary>
+        /// UC 6 : Removes the last node of the linked list.
+        /// </summary>
+        public void RemoveLastNode()
+        {
+            /// Checks if the linked list is empty
+            if (this.head == null)
+                Console.WriteLine("The linked list is empty");
+            /// Checks if the linked list has only one node
+            else if (this.head.next == null)
+            {
+                this.head = null;
+                Console.WriteLine("Last node removed successfully");
+            }
+            else
+            {
+                Node temp = this.head;
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                /// Assign next of 2nd last node to null to remove last node
+                temp.next = null;
+                Console.WriteLine("Last node removed successfully");
+            }
+        }
 
 
         /// <summary>
