@@ -40,5 +40,24 @@ namespace MSTestForLinkedList
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        /// <summary>
+        /// UC 9 : Removes the node and finds size of linked list.
+        /// </summary>
+        [TestMethod]
+        public void RemoveNodeAndFindSizeOfLinkedList()
+        {
+            //Arrange
+            int expected = 3;
+            LinkedList linkedList = new LinkedList();
+            linkedList.InsertAtLast(56);
+            linkedList.InsertAtLast(30);
+            linkedList.InsertAtLast(40);
+            linkedList.InsertAtLast(70);
+            //Act
+            linkedList.RemoveNode(40);
+            int actual = linkedList.GetSize();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
